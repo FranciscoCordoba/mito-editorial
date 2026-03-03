@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #dc5b28;
+    --color-background-light: #f8f6f6;
+    --color-background-dark: #201612;
+    --color-neutral-900: #1a1614;
+    --color-neutral-800: #3d322d;
+    --color-neutral-700: #5c4d46;
+    --color-neutral-600: #7a6960;
+    --color-neutral-500: #948177;
+    --color-neutral-400: #b3a096;
+    --color-neutral-300: #d1c1b8;
+    --color-neutral-200: #ebdcd5;
+    --color-neutral-100: #f5ece8;
+    --color-neutral-50: #faf5f2;
+
+    --font-display: "Inter", sans-serif;
+    --font-serif: "Playfair Display", serif;
+
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slide-up {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+@layer base {
+    body {
+        @apply bg-background-light dark:bg-background-dark text-neutral-900 dark:text-neutral-100 font-display transition-colors duration-300;
+    }
+}
+
+@layer utilities {
+    .animate-fade-in {
+        opacity: 0;
+    }
+
+    .animate-fade-in.is-visible {
+        animation: fade-in 0.8s ease-out forwards;
+    }
+
+    .animate-slide-up {
+        opacity: 0;
+    }
+
+    .animate-slide-up.is-visible {
+        animation: slide-up 0.8s ease-out forwards;
+    }
+
+    .glassmorphism {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .dark .glassmorphism {
+        background: rgba(32, 22, 18, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
