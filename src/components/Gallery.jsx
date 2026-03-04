@@ -5,10 +5,10 @@ export function Gallery() {
     return (
         <section id="galeria" className="scroll-mt-10 py-20 px-6 max-w-7xl mx-auto animate-fade-in">
             <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-serif font-bold text-neutral-900 dark:text-neutral-100 mb-4">
+                <h2 className="text-3xl md:text-4xl font-serif font-bold text-neutral-900 mb-4">
                     {galleryData.title}
                 </h2>
-                <p className="text-neutral-600 dark:text-neutral-400">
+                <p className="text-neutral-600">
                     {galleryData.subtitle}
                 </p>
             </div>

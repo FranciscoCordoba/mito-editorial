@@ -6,9 +6,9 @@ export function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
     return (
-        <nav className="sticky top-0 z-50 glassmorphism border-b border-neutral-200 dark:border-neutral-800 px-6 py-4 transition-all duration-300">
+        <nav className="sticky top-0 z-50 glassmorphism border-b border-neutral-200 px-6 py-4 transition-all duration-300">
             <div className="max-w-7xl mx-auto flex items-center justify-between">
-                <div className="flex items-center gap-3 text-neutral-900 dark:text-neutral-100">
+                <div className="flex items-center gap-3 text-neutral-900">
                     <IconBook className="text-primary w-8 h-8" />
                     <h2 className="text-xl font-serif font-bold tracking-tight">Mito Editorial</h2>
                 </div>
@@ -23,7 +23,7 @@ export function Navbar() {
                     <span>Cotizá tu libro</span>
                 </button>
                 <button
-                    className="md:hidden text-neutral-900 dark:text-neutral-100"
+                    className="md:hidden text-neutral-900"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 >
                     <IconMenu2 className="w-8 h-8" stroke={1.5} />
@@ -32,12 +32,12 @@ export function Navbar() {
 
             {/* Mobile Menu Dropdown */}
             {isMobileMenuOpen && (
-                <div className="md:hidden mt-4 pt-4 border-t border-neutral-200 dark:border-neutral-800 flex flex-col gap-4 animate-slide-up">
+                <div className="md:hidden mt-4 pt-4 border-t border-neutral-200 flex flex-col gap-4 animate-slide-up">
                     {navigationLinks.map((link, idx) => (
                         <a
                             key={idx}
                             href={link.href}
-                            className="text-base font-medium text-neutral-600 dark:text-neutral-400 hover:text-primary transition-colors"
+                            className="text-base font-medium text-neutral-600 hover:text-primary transition-colors"
                             onClick={() => setIsMobileMenuOpen(false)}
                         >
                             {link.label}

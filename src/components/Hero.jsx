@@ -10,10 +10,10 @@ export function Hero() {
                         <span className="text-primary font-semibold tracking-wider uppercase text-sm">
                             {heroData.badge}
                         </span>
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-black leading-tight text-neutral-900 dark:text-neutral-100">
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-black leading-tight text-neutral-900">
                             {heroData.title}
                         </h1>
-                        <p className="text-neutral-600 dark:text-neutral-400 text-lg md:text-xl max-w-lg mx-auto md:mx-0">
+                        <p className="text-neutral-600 text-lg md:text-xl max-w-lg mx-auto md:mx-0">
                             {heroData.description}
                         </p>
                         <ImgHero visibility="block md:hidden mb-6" />
@@ -32,7 +32,7 @@ export function Hero() {
     function ImgHero({ visibility }) {
         return (
             <div className={`${visibility} relative aspect-4/3 rounded-2xl overflow-hidden shadow-2xl`}>
-                <div className="absolute inset-0 bg-neutral-200 dark:bg-neutral-800 animate-pulse"></div>
+                <div className="absolute inset-0 bg-neutral-200 animate-pulse"></div>
                 <img
                     className="inset-0 w-full h-full object-cover relative z-10"
                     src={heroData.imageUrl}
