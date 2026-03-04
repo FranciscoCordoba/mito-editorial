@@ -43,7 +43,7 @@
 
 @layer base {
     body {
-        @apply bg-background-light dark:bg-background-dark text-neutral-900 dark:text-neutral-100 font-display transition-colors duration-300;
+        @apply bg-background-light text-neutral-900 font-display transition-colors duration-300;
     }
 }
 
@@ -69,10 +69,5 @@
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.3);
-    }
-
-    .dark .glassmorphism {
-        background: rgba(32, 22, 18, 0.7);
-        border: 1px solid rgba(255, 255, 255, 0.1);
     }
 }
