@@ -1,49 +1,32 @@
 import React from 'react';
-import { IconEdit, IconPalette, IconBarcode, IconStack2 } from '@tabler/icons-react';
-import { servicesData } from '../data/mockData';
+import { siteData } from '../data/mockData';
 
-const iconMap = {
-    edit: IconEdit,
-    palette: IconPalette,
-    barcode_scanner: IconBarcode,
-    layers: IconStack2,
-};
-
-export function Services() {
-    return (
-        <section id="servicios" className="scroll-mt-10 bg-neutral-50 py-20 px-6 animate-fade-in">
-            <div className="max-w-7xl mx-auto">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-serif font-bold text-neutral-900 mb-4">
-                        {servicesData.title}
-                    </h2>
-                    <p className="text-neutral-600 max-w-2xl mx-auto">
-                        {servicesData.subtitle}
-                    </p>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {servicesData.services.map((service, idx) => {
-                        const IconComponent = iconMap[service.icon];
-                        return (
-                            <div
-                                key={idx}
-                                className="bg-background-light border border-neutral-200 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-center group animate-slide-up"
-                                style={{ animationDelay: `${idx * 150}ms`, animationFillMode: 'both' }}
-                            >
-                                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
-                                    {IconComponent && <IconComponent className="w-8 h-8" stroke={1.5} />}
-                                </div>
-                                <h3 className="text-xl font-bold mb-3 text-neutral-900">
-                                    {service.title}
-                                </h3>
-                                <p className="text-neutral-600 text-sm">
-                                    {service.description}
-                                </p>
-                            </div>
-                        );
-                    })}
-                </div>
+export default function Services() {
+  return (
+    <section className="mb-32">
+      <div className="mb-12">
+        <h3 className="text-primary text-sm font-bold uppercase tracking-widest mb-4">Nuestros Servicios</h3>
+      </div>
+      <div className="flex flex-col">
+          {siteData.services.map((service, index) => (
+            <div 
+              key={service.id} 
+              className={`grid grid-cols-1 md:grid-cols-[100px_1fr] gap-x-8 border-t ${index === siteData.services.length - 1 ? 'border-b' : ''} border-gold py-10 items-start`}
+            >
+              <p className="text-gold text-2xl font-light leading-none mb-4 md:mb-0 font-display">
+                  {service.id}
+              </p>
+              <div>
+                  <h4 className="text-slate-900 text-3xl font-bold mb-4 font-display">
+                      {service.title}
+                  </h4>
+                  <p className="text-slate-700 text-lg font-light leading-relaxed max-w-2xl">
+                      {service.description}
+                  </p>
+              </div>
             </div>
-        </section>
-    );
+          ))}
+      </div>
+    </section>
+  );
 }

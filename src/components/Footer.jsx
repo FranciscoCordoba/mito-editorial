@@ -1,69 +1,72 @@
 import React from 'react';
-import { IconBook, IconBrandFacebook, IconBrandInstagram, IconMail, IconPhone, IconClock, IconHeart } from '@tabler/icons-react';
-import { footerData } from '../data/mockData';
+import { siteData } from '../data/mockData';
+import { IconBook, IconBrandWhatsapp, IconMail, IconClock, IconBrandFacebook, IconBrandInstagram } from '@tabler/icons-react';
 
-const iconMap = {
-    call: IconPhone,
-    mail: IconMail,
-    schedule: IconClock,
-    facebook: IconBrandFacebook,
-    instagram: IconBrandInstagram,
-};
+export default function Footer() {
+  const { contact } = siteData.footer;
 
-export function Footer() {
-    return (
-        <footer className="bg-[#1A1A1A] text-neutral-300 pt-20 pb-10 px-6">
-            <div className="max-w-7xl mx-auto">
-                <div className="flex flex-col md:flex-row justify-evenly gap-12 mb-16">
-                    <div className="col-span-1 lg:col-span-2">
-                        <div className="flex items-center gap-3 text-white mb-6">
-                            <IconBook className="text-primary w-8 h-8" stroke={1.5} />
-                            <h2 className="text-2xl font-serif font-bold">Mito Editorial</h2>
-                        </div>
-                        <p className="text-neutral-400 max-w-sm mb-8 leading-relaxed">
-                            {footerData.about}
-                        </p>
-                        <div className="flex gap-4">
-                            {footerData.socials && footerData.socials.map((social, idx) => {
-                                const SocialIcon = iconMap[social.icon];
-                                return (
-                                    <a key={idx} href={social.href} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-primary transition-colors text-white" aria-label={social.name}>
-                                        {SocialIcon && <SocialIcon className="w-5 h-5" stroke={1.5} />}
-                                    </a>
-                                );
-                            })}
-                        </div>
-                    </div>
-                    <div>
-                        <h3 className="text-white font-bold mb-6 uppercase tracking-wider text-sm">Contacto</h3>
-                        <ul className="space-y-4">
-                            {footerData.contact.map((item, idx) => {
-                                const IconComponent = iconMap[item.icon];
-                                return (
-                                    <li key={idx} className="flex items-start gap-3 select-none">
-                                        {IconComponent && <IconComponent className="text-primary w-5 h-5 mt-0.5" stroke={1.5} />}
-                                        <div>
-                                            <p className="text-sm font-semibold text-white">{item.type}</p>
-                                            {item.href ? (
-                                                <a href={item.href} className="text-neutral-400 hover:text-white transition-colors">{item.value}</a>
-                                            ) : (
-                                                <p className="text-neutral-400">{item.value}</p>
-                                            )}
-                                        </div>
-                                    </li>
-                                );
-                            })}
-                        </ul>
-                    </div>
-                </div>
-                <div className="border-t border-neutral-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-                    <p className="text-neutral-500 text-sm">{footerData.copyrightText}</p>
-                    <p className="text-neutral-500 text-sm">Desarrollado por <a href="https://portfolio-fcordoba.pages.dev/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Francisco Cordoba</a></p>
-                    <p className="text-neutral-500 text-sm flex items-center gap-1">
-                        Diseñado con <IconHeart className="text-primary w-4 h-4" stroke={1.5} fill="currentColor" /> para autores
-                    </p>
-                </div>
+  return (
+    <footer className="bg-[#1C1C1C] text-slate-400 py-16 px-32 font-sans">
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
+
+        {/* Left Column */}
+        <div className="flex flex-col gap-6">
+          <div className="flex items-center gap-3">
+            <img src="/Logo Mito Editor Nj.png" alt="Mito Logo" className="w-8 h-8 object-contain" />
+            <h2 className="text-white text-2xl font-display font-bold">Mito Editorial</h2>
+          </div>
+          <p className="text-slate-400 max-w-sm text-sm leading-relaxed">
+            Dedicados a transformar grandes ideas en libros excepcionales. Editorial independiente comprometida con la calidad y la visión de cada autor.
+          </p>
+          <div className="flex gap-4 mt-2">
+            <a href={siteData.footer.socials[0].href} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-amber-50/10 flex items-center justify-center hover:bg-primary text-slate-400 hover:text-white transition-colors" aria-label="Facebook">
+              <IconBrandFacebook size={20} />
+            </a>
+            <a href={siteData.footer.socials[1].href} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-amber-50/10 flex items-center justify-center hover:bg-primary text-slate-400 hover:text-white transition-colors" aria-label="Instagram">
+              <IconBrandInstagram size={20} />
+            </a>
+          </div>
+        </div>
+
+        {/* Right Column */}
+        <div className="flex flex-col gap-4 md:pl-16">
+          <h3 className="text-white text-lg font-bold uppercase tracking-wider">Contacto</h3>
+
+          <a href="https://wa.me/5492664700688?text=Hola%20Mito%20Editorial!%20Me%20contacto%20desde%20su%20p%C3%A1gina%20web." target="_blank" rel="noreferrer" className="flex items-start gap-4 group cursor-pointer">
+            <IconBrandWhatsapp className="text-primary shrink-0 mt-0.5 group-hover:text-white transition-colors" size={20} />
+            <div>
+              <span className="text-white font-bold text-md block group-hover:text-primary transition-colors">WhatsApp</span>
+              <span className="text-md group-hover:text-white transition-colors">{contact.tel}</span>
             </div>
-        </footer>
-    );
+          </a>
+
+          <div className="flex items-start gap-4">
+            <IconMail className="text-primary shrink-0 mt-0.5" size={20} />
+            <div>
+              <span className="text-white font-bold text-md block">Email</span>
+              <span className="text-md">{contact.email}</span>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-4">
+            <IconClock className="text-primary shrink-0 mt-0.5" size={20} />
+            <div>
+              <span className="text-white font-bold text-md block">Horario</span>
+              <span className="text-md">{contact.schedule}</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {/* Bottom Legal Section */}
+      <div className="max-w-[1200px] mx-auto border-t border-slate-700/50 pt-8 mt-8">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+          <span>{siteData.footer.copyright}</span>
+          <span>Desarrollado por <a href={siteData.footer.devLink} target="_blank" rel="noreferrer" className="hover:text-white transition-colors">Francisco Cordoba</a></span>
+          <span>{siteData.footer.madeWith}</span>
+        </div>
+      </div>
+    </footer>
+  );
 }

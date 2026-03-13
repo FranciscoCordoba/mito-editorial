@@ -1,45 +1,31 @@
 import React from 'react';
-import { heroData } from '../data/mockData';
+import { siteData } from '../data/mockData';
+import { IconBrandWhatsapp } from '@tabler/icons-react';
 
-export function Hero() {
+export default function Hero() {
+    const { headline, subheadline, cta, image } = siteData.hero;
+
     return (
-        <section className="max-w-7xl mx-auto px-6 py-16 md:py-24 animate-fade-in">
-            <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
-                <div className="flex-1 flex flex-col gap-6 md:gap-8 text-center md:text-left animate-slide-up">
-                    <div className="flex flex-col gap-3">
-                        <span className="text-primary font-semibold tracking-wider uppercase text-sm">
-                            {heroData.badge}
-                        </span>
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-black leading-tight text-neutral-900">
-                            {heroData.title}
+        <section className="w-full max-w-[1200px] mx-auto px-4 md:px-10 py-4 lg:py-8">
+            <div className="w-full">
+                <div
+                    className="flex min-h-[480px] md:min-h-[560px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl md:rounded-2xl items-start justify-end px-6 pb-12 md:px-12 md:pb-16 relative overflow-hidden shadow-lg"
+                    style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.7) 100%), url("${image}")` }}
+                >
+                    <div className="flex flex-col gap-4 text-left max-w-2xl relative z-10">
+                        <h1 className="text-white font-display text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-[-0.02em] drop-shadow-md">
+                            {headline}
                         </h1>
-                        <p className="text-neutral-600 text-lg md:text-xl max-w-lg mx-auto md:mx-0">
-                            {heroData.description}
-                        </p>
-                        <ImgHero visibility="block md:hidden mb-6" />
+                        <h2 className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed max-w-xl">
+                            {subheadline}
+                        </h2>
                     </div>
-                    <div>
-                        <button className="inline-flex items-center justify-center rounded-lg h-12 px-8 bg-primary text-white text-base font-bold shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-300 whitespace-nowrap">
-                            <span>{heroData.ctaText}</span>
-                        </button>
-                    </div>
+                    <a href="https://wa.me/5492664700688?text=Hola%20Mito%20Editorial!%20Me%20interesa%20iniciar%20la%20edición%20de%20mi%20libro." target="_blank" rel="noreferrer" className="flex w-full sm:w-auto cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-md h-12 md:h-14 px-8 bg-primary hover:bg-primary-hover transition-transform hover:-translate-y-0.5 text-white text-base md:text-lg font-bold leading-normal tracking-[0.015em] shadow-xl relative z-10 mt-4">
+                        <IconBrandWhatsapp size={24} />
+                        <span className="truncate">{cta}</span>
+                    </a>
                 </div>
-                <ImgHero visibility="hidden md:block" />
             </div>
         </section>
     );
-
-    function ImgHero({ visibility }) {
-        return (
-            <div className={`${visibility} relative aspect-4/3 rounded-2xl overflow-hidden shadow-2xl`}>
-                <div className="absolute inset-0 bg-neutral-200 animate-pulse"></div>
-                <img
-                    className="inset-0 w-full h-full object-cover relative z-10"
-                    src={heroData.imageUrl}
-                    alt={heroData.imageAlt}
-                />
-            </div>
-        );
-    }
-
 }

@@ -1,73 +1,35 @@
 @import "tailwindcss";
 
 @theme {
-    --color-primary: #dc5b28;
-    --color-background-light: #f8f6f6;
-    --color-background-dark: #201612;
-    --color-neutral-900: #1a1614;
-    --color-neutral-800: #3d322d;
-    --color-neutral-700: #5c4d46;
-    --color-neutral-600: #7a6960;
-    --color-neutral-500: #948177;
-    --color-neutral-400: #b3a096;
-    --color-neutral-300: #d1c1b8;
-    --color-neutral-200: #ebdcd5;
-    --color-neutral-100: #f5ece8;
-    --color-neutral-50: #faf5f2;
+  --color-primary: #ff6200;
+  --color-primary-hover: #e65800;
+  --color-background-light: #fafafa;
+  --color-background-dark: #230f14;
+  --color-parchment: #fff8f3;
+  --color-gold: #FEB400; /* Amber from Design A to replace Gold for accents */
+  --color-slate-gray: #4a4a4a; /* Graphite from A */
 
-    --font-display: "Inter", sans-serif;
-    --font-serif: "Playfair Display", serif;
+  --font-display: "Merriweather", serif;
+  --font-body: "Inter", sans-serif;
+  --font-sans: "Inter", sans-serif;
 
-    @keyframes fade-in {
-        from {
-            opacity: 0;
-        }
-
-        to {
-            opacity: 1;
-        }
-    }
-
-    @keyframes slide-up {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
+  --radius-none: 0.125rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
 }
 
-@layer base {
-    body {
-        @apply bg-background-light text-neutral-900 font-display transition-colors duration-300;
-    }
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-background-light);
+  color: var(--color-slate-gray); /* default text color */
 }
 
-@layer utilities {
-    .animate-fade-in {
-        opacity: 0;
-    }
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: var(--font-display);
+}
 
-    .animate-fade-in.is-visible {
-        animation: fade-in 0.8s ease-out forwards;
-    }
-
-    .animate-slide-up {
-        opacity: 0;
-    }
-
-    .animate-slide-up.is-visible {
-        animation: slide-up 0.8s ease-out forwards;
-    }
-
-    .glassmorphism {
-        background: rgba(255, 255, 255, 0.7);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-    }
+.hover-bw:hover {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
 }

@@ -1,55 +1,41 @@
 import React from 'react';
+import { siteData } from '../data/mockData';
 import { IconStarFilled } from '@tabler/icons-react';
-import { testimonialsData } from '../data/mockData';
 
-export function Testimonials() {
+export default function Testimonials() {
     return (
-        <section id="testimonios" className="scroll-mt-10 bg-background-light py-24 px-6 animate-fade-in">
-            <div className="max-w-6xl mx-auto">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-serif font-bold text-neutral-900 mb-4">
-                        {testimonialsData.title}
-                    </h2>
-                    <p className="text-neutral-600 max-w-2xl mx-auto text-lg">
-                        {testimonialsData.subtitle}
-                    </p>
-                </div>
+        <section className="mb-32 bg-background-light py-24 px-4 md:px-12 w-full flex flex-col items-center justify-center">
+            <h1 className='text-md font-bold text-center mb-12 text-primary uppercase'>Lo que dicen nuestros autores</h1>
+            <div className="max-w-[1200px] w-full flex flex-col md:flex-row items-stretch gap-6">
+                {siteData.testimonials.map((testimonial, index) => (
+                    <div
+                        key={index}
+                        className="flex-1 flex flex-col items-start bg-white rounded-2xl shadow-sm border border-slate-100 p-8 text-left transition-transform hover:-translate-y-1 hover:shadow-md"
+                    >
+                        <div className="flex text-[#DD5E36] gap-1 mb-6">
+                            {[...Array(testimonial.stars)].map((_, i) => (
+                                <IconStarFilled key={i} size={20} className="text-[#DD5E36]" />
+                            ))}
+                        </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {testimonialsData.testimonials.map((testimonial, idx) => (
-                        <div
-                            key={idx}
-                            className="bg-white rounded-2xl p-8 shadow-sm border border-neutral-100 animate-slide-up flex flex-col"
-                            style={{ animationDelay: `${idx * 150}ms`, animationFillMode: 'both' }}
-                        >
-                            <div className="flex gap-1 mb-6 text-[#D95D39]">
-                                {[...Array(testimonial.rating)].map((_, i) => (
-                                    <IconStarFilled key={i} className="w-5 h-5" />
-                                ))}
-                            </div>
+                        <p className="text-slate-500 font-sans text-[15px] leading-[1.8] mb-10 grow">
+                            "{testimonial.quote}"
+                        </p>
 
-                            <p className="text-neutral-600 mb-8 leading-relaxed grow">
-                                "{testimonial.content}"
-                            </p>
-
-                            <div className="flex items-center gap-4 mt-auto">
-                                <img
-                                    src={testimonial.authorImage}
-                                    alt={testimonial.authorName}
-                                    className="w-12 h-12 rounded-full object-cover"
-                                />
-                                <div className="flex flex-col">
-                                    <h4 className="font-bold text-neutral-900 text-sm">
-                                        {testimonial.authorName}
-                                    </h4>
-                                    <p className="text-neutral-500 text-sm italic">
-                                        {testimonial.bookTitle}
-                                    </p>
-                                </div>
+                        <div className="flex items-center gap-4 mt-auto">
+                            <img
+                                src={testimonial.avatar}
+                                alt={testimonial.author}
+                                className="w-12 h-12 rounded-full object-cover"
+                                loading="lazy"
+                            />
+                            <div className="flex flex-col">
+                                <span className="font-bold text-slate-800 text-sm font-sans block">{testimonial.author}</span>
+                                <span className="text-slate-400 italic text-[13px] font-sans mt-0.5">{testimonial.book}</span>
                             </div>
                         </div>
-                    ))}
-                </div>
+                    </div>
+                ))}
             </div>
         </section>
     );
