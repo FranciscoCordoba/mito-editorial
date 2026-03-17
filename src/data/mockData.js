@@ -8,7 +8,7 @@ export const siteData = {
       { label: "Catálogo", href: "#catalogo" },
       { label: "Contacto", href: "#contacto" },
     ],
-    cta: "¡Quiero publicar!"
+    cta: "Contacto"
   },
   hero: {
     headline: "Convertimos tu manuscrito en un libro físico real",
@@ -24,17 +24,22 @@ export const siteData = {
     {
       id: "01",
       title: "Diseño y Maquetación",
-      description: "Interiores especiales según su contenido, y diseño de portadas únicas aportando opciones a elegir para una lectura perfecta.",
+      description: "Cuidamos la estética interior para una fluida lectura. Y ponemos toda nuestra creatividad en el diseño de tapas y contratapas, proponiendo opciones a elección.",
     },
     {
       id: "02",
-      title: "Gestión Legal y Registros",
-      description: "Realizamos los trámites de Registro de ISBN y Derecho de Autor (DNDA) con un ejemplar de guarda incluido.",
+      title: "Gestión de ISBN y Registro de Autor",
+      description: "Realizamos los trámites correspondientes al Registro de ISBN y de Autor en la Cámara Argentina del Libro y la Dirección Nacional de Derechos de Autor (incluyendo el envío de un ejemplar para la guarda), tanto en libros físicos como en E.Book's. Todo incluido en el costo del servicio.",
     },
     {
       id: "03",
-      title: "Tiradas Flexibles e Impresión",
-      description: "Imprimí lo que necesites, desde 10 ejemplares hasta el infinito. Te entregamos una Prueba de Galera (ejemplar 00) antes de la final.",
+      title: "Edición Impresa o Digital",
+      description: "Imprimimos desde 10 ejemplares hasta el infinito!! Previo a la tirada completa entregamos una Prueba de Galera para chequear cualquier posible error.",
+    },
+    {
+      id: "04",
+      title: "Difusión",
+      description: "Obsequiamos un flyer de invitación a la presentación de Tu Libro. Colaboramos con la difusión en nuestras RRSS.",
     }
   ],
   technical: [
@@ -44,12 +49,12 @@ export const siteData = {
       image: "/servicios/medidas.webp"
     },
     {
-      title: "Tapas Premium",
-      description: "Papel ilustración (brillante) u Opalina (mate) 300 gr, laminado e impresión full color.",
+      title: "Tapas",
+      description: "Full color en Papel Ilustración (brillante) u Opalina (mate) de 300 grs. Acabado laminado (mate o brillante). Con solapas opcional.",
       image: "/servicios/tapas.webp"
     },
     {
-      title: "Interiores Confortables",
+      title: "Interiores",
       description: "Papel obra 80gr, ahuesado 80gr o ecológico 75gr. Impresión láser negra (no fotocopias).",
       image: "/servicios/papeles-tres.webp"
     },

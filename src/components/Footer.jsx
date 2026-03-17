@@ -5,6 +5,10 @@ import Instagram from './icons/Instagram';
 import Whatsapp from './icons/Whatsapp';
 import Mail from './icons/Mail';
 import Clock from './icons/Clock';
+import MercadoPago from './icons/MercadoPago';
+import Paypal from './icons/Paypal';
+import Cash from './icons/Cash';
+import CreditCard from './icons/CreditCard';
 
 export default function Footer() {
   const { contact } = siteData.footer;
@@ -19,9 +23,14 @@ export default function Footer() {
             <img src="/Logo Mito Editor Nj.webp" alt="Mito Logo" className="w-8 h-8 object-contain" />
             <h2 className="text-white text-2xl font-display font-bold ">Mito Editorial</h2>
           </div>
-          <p className="text-slate-400 max-w-sm text-sm leading-relaxed">
-            Dedicados a transformar grandes ideas en libros excepcionales. Editorial independiente comprometida con la calidad y la visión de cada autor.
-          </p>
+          <div className="flex flex-col gap-2">
+            <p className="text-slate-400 max-w-sm text-sm leading-relaxed">
+              Dedicados a transformar tu expresión literaria, tus palabras, en libros excepcionales.
+            </p>
+            <p className="text-slate-400 max-w-sm text-sm leading-relaxed">
+              Editorial independiente comprometida con la calidad y con el anhelo de cada autor.
+            </p>
+          </div>
           <div className="flex gap-4 mt-2">
             <a href={siteData.footer.socials[0].href} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-amber-50/10 flex items-center justify-center hover:bg-primary text-slate-400 hover:text-white transition-colors" aria-label="Facebook">
               <Facebook className="text-white" />
@@ -30,6 +39,8 @@ export default function Footer() {
               <Instagram className="text-white" />
             </a>
           </div>
+
+
         </div>
 
         {/* Right Column */}
@@ -60,7 +71,39 @@ export default function Footer() {
             </div>
           </div>
 
+          {/* Medios de Pago */}
+          <div className="flex flex-col gap-3 mt-8">
+            <h4 className="text-white text-xs font-bold uppercase tracking-widest opacity-70">Formas y medios de pago</h4>
+            <div className="flex gap-4 items-center">
+              <div className="group relative flex flex-col items-center">
+                <MercadoPago size={36} className="text-slate-400 group-hover:text-[#00B1EA] transition-colors cursor-help" />
+                <span className="absolute -top-10 bg-slate-800 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 group-hover:-translate-y-1 transition-all pointer-events-none whitespace-nowrap shadow-xl border border-slate-700 z-50">
+                  Mercado Pago
+                </span>
+              </div>
+              <div className="group relative flex flex-col items-center">
+                <Paypal size={28} className="text-slate-400 group-hover:text-[#003087] transition-colors cursor-help" />
+                <span className="absolute -top-10 bg-slate-800 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 group-hover:-translate-y-1 transition-all pointer-events-none whitespace-nowrap shadow-xl border border-slate-700 z-50">
+                  PayPal
+                </span>
+              </div>
+              <div className="group relative flex flex-col items-center">
+                <Cash size={28} className="text-slate-400 group-hover:text-green-500 transition-colors cursor-help" />
+                <span className="absolute -top-10 bg-slate-800 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 group-hover:-translate-y-1 transition-all pointer-events-none whitespace-nowrap shadow-xl border border-slate-700 z-50">
+                  Efectivo
+                </span>
+              </div>
+              <div className="group relative flex flex-col items-center">
+                <CreditCard size={28} className="text-slate-400 group-hover:text-amber-500 transition-colors cursor-help" />
+                <span className="absolute -top-10 bg-slate-800 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 group-hover:-translate-y-1 transition-all pointer-events-none whitespace-nowrap shadow-xl border border-slate-700 z-50">
+                  Transferencias bancarias
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
+
+
       </div>
 
       {/* Bottom Legal Section */}
