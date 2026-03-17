@@ -6,7 +6,7 @@ export const siteData = {
       { label: "Formatos", href: "#formatos" },
       { label: "Autores", href: "#autores" },
       { label: "Catálogo", href: "#catalogo" },
-      { label: "Contacto", href: "#contacto" },
+      { label: "Trabajemos", href: "#trabajemos" },
     ],
     cta: "Contacto"
   },

@@ -4,7 +4,7 @@ import Star from './icons/Star';
 
 export default function Testimonials() {
     return (
-        <section id="autores" className="mb-32 bg-background-light py-24 px-4 md:px-12 w-full flex flex-col items-center justify-center">
+        <section id="autores" className="mb-32 scroll-mt-8 bg-background-light py-24 px-4 md:px-12 w-full flex flex-col items-center justify-center">
             <h1 className='text-md font-bold text-center mb-12 text-primary uppercase'>Lo que dicen nuestros autores</h1>
             <div className="max-w-[1200px] w-full flex flex-col md:flex-row items-stretch gap-6">
                 {siteData.testimonials.map((testimonial, index) => (

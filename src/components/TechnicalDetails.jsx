@@ -3,7 +3,7 @@ import { siteData } from '../data/mockData';
 
 export default function TechnicalDetails() {
     return (
-        <section id="formatos" className="mb-32">
+        <section id="formatos" className="mb-32 scroll-mt-32">
             <h3 className="text-primary text-sm font-bold uppercase tracking-widest mb-12 text-center">Detalles Técnicos</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 {siteData.technical.map((item, index) => (

@@ -5,7 +5,7 @@ export default function FinalCTA() {
     const { title } = siteData.footer;
 
     return (
-        <section id="contacto" className="bg-primary py-32 px-6 text-center">
+        <section id="trabajemos" className="bg-primary py-32 scroll-mt-32 px-6 text-center">
             <div className="max-w-3xl mx-auto flex flex-col items-center gap-10">
                 <h2 className="text-white text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight font-display">
                     {title}

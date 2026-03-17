@@ -3,8 +3,8 @@ import { siteData } from '../data/mockData';
 
 export default function Services() {
   return (
-    <section className="mb-32">
-      <div id="servicios" className="mb-12">
+    <section id="servicios" className="mb-32 scroll-mt-32">
+      <div className="mb-12">
         <h3 className="text-primary text-sm font-bold uppercase tracking-widest mb-4">Nuestros Servicios</h3>
       </div>
       <div className="flex flex-col">

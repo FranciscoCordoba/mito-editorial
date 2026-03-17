@@ -7,7 +7,7 @@ export default function Portfolio() {
     const displayedPortfolio = showAll ? siteData.portfolio : siteData.portfolio.slice(0, 3);
 
     return (
-        <section id="catalogo" className="mb-32 flex flex-col items-center">
+        <section id="catalogo" className="mb-32 scroll-mt-32 flex flex-col items-center">
             <h3 className="text-primary text-sm font-bold uppercase tracking-widest mb-12 self-start">Selección de Obras</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 w-full">
                 {displayedPortfolio.map((item, index) => (

@@ -3,8 +3,7 @@ import { siteData } from '../data/mockData';
 
 export default function Header() {
   return (
-    <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 px-4 md:px-10 py-5 sticky top-0 bg-background-light/90  backdrop-blur-md z-50">
-
+    <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 px-4 md:px-10 py-5 sticky top-0 bg-background-light/90 backdrop-blur-md z-50">
 
       <div className="flex items-center gap-4">
         <h2 style={{ fontFamily: 'var(--font-sans)' }} className="text-primary text-lg sm:text-xl md:text-2xl font-black leading-tight uppercase flex items-center gap-2">

@@ -11,7 +11,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="font-body text-slate-800 bg-background-light min-h-screen flex flex-col group/design-root overflow-x-hidden">
+    <div className="font-body text-slate-800 bg-background-light min-h-screen flex flex-col group/design-root">
       <Header />
       <main className="flex-1 w-full mx-auto px-0 md:px-6 py-6 md:py-12">
         <Hero />
