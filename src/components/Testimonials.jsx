@@ -1,10 +1,10 @@
 import React from 'react';
 import { siteData } from '../data/mockData';
-import { IconStarFilled } from '@tabler/icons-react';
+import Star from './icons/Star';
 
 export default function Testimonials() {
     return (
-        <section className="mb-32 bg-background-light py-24 px-4 md:px-12 w-full flex flex-col items-center justify-center">
+        <section id="autores" className="mb-32 bg-background-light py-24 px-4 md:px-12 w-full flex flex-col items-center justify-center">
             <h1 className='text-md font-bold text-center mb-12 text-primary uppercase'>Lo que dicen nuestros autores</h1>
             <div className="max-w-[1200px] w-full flex flex-col md:flex-row items-stretch gap-6">
                 {siteData.testimonials.map((testimonial, index) => (
@@ -14,7 +14,7 @@ export default function Testimonials() {
                     >
                         <div className="flex text-[#DD5E36] gap-1 mb-6">
                             {[...Array(testimonial.stars)].map((_, i) => (
-                                <IconStarFilled key={i} size={20} className="text-[#DD5E36]" />
+                                <Star key={i} className="text-[#DD5E36]" />
                             ))}
                         </div>
 

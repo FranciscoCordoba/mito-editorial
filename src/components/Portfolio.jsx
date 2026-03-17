@@ -7,7 +7,7 @@ export default function Portfolio() {
     const displayedPortfolio = showAll ? siteData.portfolio : siteData.portfolio.slice(0, 3);
 
     return (
-        <section className="mb-32 flex flex-col items-center">
+        <section id="catalogo" className="mb-32 flex flex-col items-center">
             <h3 className="text-primary text-sm font-bold uppercase tracking-widest mb-12 self-start">Selección de Obras</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 w-full">
                 {displayedPortfolio.map((item, index) => (
@@ -23,7 +23,7 @@ export default function Portfolio() {
                 ))}
             </div>
 
-            <button 
+            <button
                 onClick={() => setShowAll(!showAll)}
                 className="mt-14 flex min-w-[124px] cursor-pointer items-center justify-center rounded-md h-12 px-8 border-2 border-primary text-primary text-sm font-bold uppercase tracking-widest hover:bg-primary/5 transition-colors"
             >

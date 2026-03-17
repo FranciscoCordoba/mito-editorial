@@ -12,30 +12,24 @@ import Footer from './components/Footer';
 function App() {
   return (
     <div className="font-body text-slate-800 bg-background-light min-h-screen flex flex-col group/design-root overflow-x-hidden">
-      {<Header />}
+      <Header />
       <main className="flex-1 w-full mx-auto px-0 md:px-6 py-6 md:py-12">
-        <div id="inicio">
-          <Hero />
-        </div>
-        <div id="nosotros" className="max-w-[1200px] w-full mx-auto px-6">
+        <Hero />
+
+        <div className="max-w-[1200px] w-full mx-auto px-6">
           <About />
-        </div>
-        <div id="servicios" className="max-w-[1200px] w-full mx-auto px-6">
           <Services />
-        </div>
-        <div id="formatos" className="max-w-[1200px] w-full mx-auto px-6">
           <TechnicalDetails />
         </div>
-        <div id="autores">
-          <Testimonials />
-        </div>
-        <div id="catalogo" className="max-w-[1200px] w-full mx-auto px-6">
+
+        <Testimonials />
+
+        <div className="max-w-[1200px] w-full mx-auto px-6">
           <Portfolio />
         </div>
       </main>
-      <div id="contacto">
-        <FinalCTA />
-      </div>
+
+      <FinalCTA />
       <Footer />
     </div>
   );
