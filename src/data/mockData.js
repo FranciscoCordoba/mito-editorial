@@ -14,7 +14,7 @@ export const siteData = {
     headline: "Convertimos tu manuscrito en un libro físico real",
     subheadline: "Acompañamos a autores independientes en cada paso del proceso de edición, diseño e impresión con calidez y profesionalismo.",
     cta: "Contactar por WhatsApp",
-    image: "/hero-img.png",
+    image: "/hero-img.webp",
   },
   about: {
     quote: "Hacemos libros con el corazón",
