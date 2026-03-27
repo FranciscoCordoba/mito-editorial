@@ -24,10 +24,10 @@ export default function Footer() {
             <h2 className="text-white text-2xl font-display font-bold ">Mito Editorial</h2>
           </div>
           <div className="flex flex-col gap-2">
-            <p className="text-slate-400 max-w-sm text-sm leading-relaxed">
+            <p className="text-slate-400 max-w-sm text-md leading-relaxed">
               Dedicados a transformar tu expresión literaria, tus palabras, en libros excepcionales.
             </p>
-            <p className="text-slate-400 max-w-sm text-sm leading-relaxed">
+            <p className="text-slate-400 max-w-sm text-md leading-relaxed">
               Editorial independiente comprometida con la calidad y con el anhelo de cada autor.
             </p>
           </div>
