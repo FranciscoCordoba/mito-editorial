@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { siteData } from '../data/mockData';
+import Reveal from './Reveal';
 
 export default function Portfolio() {
     const [showAll, setShowAll] = useState(false);
@@ -11,15 +12,17 @@ export default function Portfolio() {
             <h3 className="text-primary text-sm font-bold uppercase tracking-widest mb-12 self-start">Selección de Obras</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 w-full">
                 {displayedPortfolio.map((item, index) => (
-                    <div key={index} className="group cursor-pointer">
-                        <div
-                            className="w-full bg-center bg-no-repeat aspect-3/4 bg-cover rounded-md mb-4 hover-bw shadow-lg transition-all hover:shadow-xl"
-                            style={{ backgroundImage: `url("${item.image}")` }}
-                            aria-label={item.title}
-                        />
-                        <p className="text-slate-900  text-lg font-bold font-display leading-tight">{item.title}</p>
-                        <p className="text-slate-600  text-sm font-light mt-1">{item.category}</p>
-                    </div>
+                    <Reveal key={index} animation="reveal" delay={(index % 3) * 150}>
+                        <div className="group cursor-pointer">
+                            <div
+                                className="w-full bg-center bg-no-repeat aspect-3/4 bg-cover rounded-md mb-4 hover-bw shadow-lg transition-all hover:shadow-xl"
+                                style={{ backgroundImage: `url("${item.image}")` }}
+                                aria-label={item.title}
+                            />
+                            <p className="text-slate-900  text-lg font-bold font-display leading-tight">{item.title}</p>
+                            <p className="text-slate-600  text-sm font-light mt-1">{item.category}</p>
+                        </div>
+                    </Reveal>
                 ))}
             </div>
 
