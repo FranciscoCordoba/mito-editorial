@@ -1,6 +1,6 @@
 export const siteData = {
   header: {
-    logo: "MiTO Editorial",
+    logo: "MiTO EDITORIAL",
     nav: [
       { label: "Servicios", href: "#servicios" },
       { label: "Formatos", href: "#formatos" },
@@ -67,24 +67,24 @@ export const siteData = {
   testimonials: [
     {
       stars: 5,
-      quote: "El equipo de Mito Editorial cuidó mi libro como si fuera propio. La corrección fue impecable y el diseño de tapa superó todas mis expectativas. Una experiencia verdaderamente premium.",
-      author: "María Laura V.",
-      book: "El jardín de los ecos",
-      avatar: "https://randomuser.me/api/portraits/women/44.jpg"
+      quote: "Sin duda, recomiendo a MiTO a quienes buscan un equipo serio, cercano y comprometido con sus autores. Era mi primer libro y me acompañaron desde el inicio hasta el final del proceso, respondiendo a todas mis dudas con paciencia y profesionalismo.",
+      author: "Celeste Contrera",
+      book: "30 años de crisálida",
+      avatar: "/fotos-autores/celeste.webp"
     },
     {
       stars: 5,
-      quote: "Buscaba una editorial que me permitiera imprimir una tirada pequeña sin perder calidad. Mito me dio exactamente eso: un libro hermoso, encuadernación de primera y un trato humano excepcional.",
-      author: "Carlos R. Gómez",
-      book: "Crónicas de ciudad",
-      avatar: "https://randomuser.me/api/portraits/men/32.jpg"
+      quote: "Materializar mí libro junto a MiTO Editorial, fue una de las experiencias más hermosas de mí vida! Agradezco a la diseñadora María Celeste, porque ella coloco el último ingrediente mágico para que mí libro sea único y especial.",
+      author: "Roxana Peña",
+      book: "Cartas Mojadas",
+      avatar: "/fotos-autores/roxana.webp"
     },
     {
       stars: 5,
-      quote: "Desde la gestión del ISBN hasta la elección del papel, me acompañaron en cada paso. Sentí que mi obra de poesía fue tratada con el respeto y la delicadeza que merecía. Totalmente recomendados.",
-      author: "Sofía M.",
-      book: "Versos al viento",
-      avatar: "https://randomuser.me/api/portraits/women/68.jpg"
+      quote: "Desde el primer contacto hicieron propio mi proyecto. Cuidaron cada detalle, resolvieron cada obstáculo y estuvieron presentes incluso en feriados y fines de semana. Entienden lo que significa un libro para un escritor: no trabajan solo con profesionalismo, sino también con el corazón.",
+      author: "Leandro Cejas",
+      book: "Malvinas: Protagonistas de la Historia",
+      avatar: "/fotos-autores/leandro.webp"
     }
   ],
   portfolio: [
@@ -130,7 +130,7 @@ export const siteData = {
       { name: "Facebook", href: "https://www.facebook.com/estudiomito/?_rdr", icon: "facebook" },
       { name: "Instagram", href: "https://www.instagram.com/mitoestudiografico/", icon: "instagram" }
     ],
-    copyright: "© 2026 Mito Editorial. Todos los derechos reservados.",
+    copyright: "© 2026 MiTO Editorial. Todos los derechos reservados.",
     developer: "Desarrollado por Francisco Cordoba",
     devLink: "https://portfolio-fcordoba.pages.dev/",
     madeWith: "Diseñado con ❤️ para autores"
