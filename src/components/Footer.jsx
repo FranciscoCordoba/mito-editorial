@@ -21,7 +21,7 @@ export default function Footer() {
         <div className="flex flex-col gap-6">
           <div className="flex items-center ms-4 w-min md:w-full gap-4">
             <img src="/Logo Mito Editor Nj.webp" alt="Mito Logo" className="w-8 h-8 object-contain" />
-            <h2 className="text-white text-2xl font-display font-bold ">Mito Editorial</h2>
+            <h2 className="text-white text-2xl font-display font-bold ">MiTO Editorial</h2>
           </div>
           <div className="flex flex-col gap-2">
             <p className="text-slate-400 max-w-sm text-md leading-relaxed">
